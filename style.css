@@ -1,3 +1,56 @@
-.h2 {
-    color: red;
+input {
+    display: block;
+  }
+  html {
+    background-color: white;
+  }
+
+.button1 {
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9.2901px 23.2253px;
+    gap: 15px;
+
+    width: 99.45px;
+    height: 37.58px;
+
+    background: #FFFFFF;
+    border: 2.32253px solid #7D7BC9;
+    box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 0.464505px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
 }
+
+.button2 {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9.2901px 23.2253px;
+    gap: 15px;
+
+    width: 89.45px;
+    height: 37.58px;
+
+    background: #FFFFFF;
+    border: 2.32253px solid #F16B6B;
+    box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 0.464505px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }

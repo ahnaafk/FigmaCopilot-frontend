@@ -1,20 +1,89 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/figma-plugin-ds.css"/>
+<style>
+  input {
+    display: block;
+    border: 2.32253px solid #3e3e4d;
+    box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 0.464505px;
+    margin-top: 5px;
+    padding: 3px 2px;
 
-  <h2>Rectangle Creator</h2>
-  <p>Prompt: <input id="count" value="5"></p>
-  <button id="create">Submit</button>
-  <button id="cancel">Cancel</button>
-  <script>
-    
-    document.getElementById('create').onclick = () => {
-      const textbox = document.getElementById('count');
-      const count = parseInt(textbox.value, 10);
-      parent.postMessage({ pluginMessage: { type: 'prompt', count } }, '*')
-    }
-    
-    document.getElementById('cancel').onclick = () => {
-      parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-    }
-    
-  </script>
+  }
+  html {
+    background-color: whitesmoke;
+  }
 
-</html>
+  .button1 {
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 23.2253px;
+    gap: 15px;
+
+    width: 99.45px;
+    height: 37.58px;
+
+    background: #FFFFFF;
+    border: 2.32253px solid #7D7BC9;
+    box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 0.464505px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    }
+
+  .button2 {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 23.2253px;
+    gap: 15px;
+
+    width: 89.45px;
+    height: 37.58px;
+
+    background: #FFFFFF;
+    border: 2.32253px solid #F16B6B;
+    box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 0.464505px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+</style>
+
+<div class="row justify-content-between" style="padding-top: 2px;">
+  <h2 style="text-align: center;">Figma CoPilot</h2>
+  <p class="pl-small">Write your prompts here: <input style="width:90%; color:grey;" id="prompt" value="  Sports, Website, Minimalist, etc..."></p>
+</div>
+
+<div class="flex justify-content-around pb-small">
+  <button class='button1' id="Submit">Submit</button>
+  <button class='button2' id="cancel">Cancel</button>
+</div>
+
+<script>
+  
+  document.getElementById('Submit').onclick = () => {
+        
+    parent.postMessage({ pluginMessage: { type: 'prompt'} }, '*')
+  }
+  
+  document.getElementById('cancel').onclick = () => {
+    parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+  }
+  
+</script>
