@@ -1,0 +1,25 @@
+<html>
+
+  
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <h2>Rectangle Creator</h2>
+  <p>Prompt: <input id="count" value="5"></p>
+  <button id="create">Submit</button>
+  <button id="cancel">Cancel</button>
+  <script>
+    
+    document.getElementById('create').onclick = () => {
+      const textbox = document.getElementById('count');
+      const count = parseInt(textbox.value, 10);
+      parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+    }
+    
+    document.getElementById('cancel').onclick = () => {
+      parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+    }
+    
+  </script>
+
+</html>
