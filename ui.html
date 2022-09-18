@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/figma-plugin-ds.css" />
 <style>
   input {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
     border: 2.32253px solid #3e3e4d;
     box-shadow: 2.78703px 3.25154px 0px rgba(0, 0, 0, 0.4);
@@ -15,6 +16,7 @@
   }
 
   .button1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     box-sizing: border-box;
 
@@ -38,10 +40,13 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    color: #7D7BC9;
 
   }
 
   .button2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
     box-sizing: border-box;
 
     display: flex;
@@ -62,12 +67,20 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+    color: #F16B6B;
 
+  }
+
+  .gradient {
+    background: linear-gradient(268.48deg, #A380DC 2.2%, #FF0000 100.89%, #D02323 100.89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 </style>
 
 <div class="row justify-content-between" style="padding-top: 2px;">
-  <h2 style="text-align: center;">Figma CoPilot</h2>
+  <h2 class="gradient" style="text-align: center;">Figma CoPilot</h2>
   <p class="pl-small">Write your prompts here: <input style="width:90%; color:grey;" id="prompt"
       value="  Sports, Website, Minimalist, etc..."></p>
 </div>
